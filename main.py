@@ -7,8 +7,13 @@ def countdown(n: int) -> NoReturn:
         countdown(n - 1)
 
 
+def factorial(n: int) -> int:
+    return 1 if n <= 1 else n * factorial(n - 1)
+
+
 def main() -> NoReturn:
     countdown(5)
+    print(factorial(4))
 
 
 if __name__ == "__main__":
