@@ -44,11 +44,17 @@ def flatten(lista: list) -> list:
     return result
 
 
+# unnecessary recursion
+def palindrome(text: str) -> bool:
+    return text[::-1] == text
+
+
 def main() -> NoReturn:
     countdown(5)
     print(factorial(4))
 
     print(flatten(names))
+    print(palindrome("oso"))
 
 
 if __name__ == "__main__":
