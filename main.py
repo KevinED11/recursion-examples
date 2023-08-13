@@ -51,13 +51,15 @@ def palindrome(text: str) -> bool:
 
 
 def quicksort(list_items: list) -> list:
-    if len(list_items) <= 1:
+    length_list_items = len(list_items)
+
+    if length_list_items <= 1:
         return list_items
 
     pivot = statistics.median(
         [
             list_items[0],
-            list_items[len(list_items) // 2],
+            list_items[length_list_items // 2],
             list_items[-1]
         ]
     )
