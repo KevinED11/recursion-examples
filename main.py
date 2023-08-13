@@ -1,6 +1,7 @@
 import statistics
 from typing import NoReturn
 from itertools import chain
+import random
 
 
 def countdown(n: int) -> NoReturn:
@@ -77,13 +78,21 @@ def quicksort(list_items: list) -> list:
     )
 
 
+def get_random_numbers(length=15, minimum=1, maximum=100):
+    numbers = []
+    for _ in range(length):
+        numbers.append(random.randint(minimum, maximum))
+
+    return numbers
+
+
 def main() -> NoReturn:
     countdown(5)
     print(factorial(4))
 
     print(flatten(names))
     print(palindrome("oso"))
-    print(quicksort([1, 45, 5, 25, 9, 30, 9, 10]))
+    print(quicksort(get_random_numbers()))
 
 
 if __name__ == "__main__":
