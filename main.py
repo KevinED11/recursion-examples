@@ -78,7 +78,8 @@ def quicksort(list_items: list) -> list:
     )
 
 
-def get_random_numbers(length=15, minimum=1, maximum=100):
+def get_random_numbers(length: int = 15, minimum: int = 1,
+                       maximum: int = 100) -> list[int]:
     numbers = []
     for _ in range(length):
         numbers.append(random.randint(minimum, maximum))
