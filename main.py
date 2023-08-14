@@ -65,11 +65,15 @@ def quicksort(list_items: list) -> list:
         ]
     )
 
-    items_less, pivot_items, items_greater = (
-        [n for n in list_items if n < pivot],
-        [n for n in list_items if n == pivot],
-        [n for n in list_items if n > pivot],
-    )
+    items_less, pivot_items, items_greater = [], [], []
+
+    for item in list_items:
+        if item < pivot:
+            items_less.append(item)
+        elif item == pivot:
+            pivot_items.append(item)
+        else:
+            items_greater.append(item)
 
     return (
             quicksort(items_less) +
