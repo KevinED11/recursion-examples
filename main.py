@@ -94,6 +94,7 @@ def main() -> NoReturn:
     print(flatten(names))
     print(palindrome("oso"))
     print(quicksort(get_random_numbers()))
+    print(statistics.median([15, 10, 20]))
 
 
 if __name__ == "__main__":
