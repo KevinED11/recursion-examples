@@ -34,7 +34,7 @@ def sum_recursive(current_number: int, accumulated_sum: int) -> int:
         return sum_recursive(current_number + 1, accumulated_sum + current_number)
 
 
-def list_sum_recursive(input_list):
+def list_sum_recursive(input_list: list) -> int:
     # Base case
     if not input_list:
         return 0
@@ -53,6 +53,7 @@ def main() -> None:
     delivery()
     print(factorial_recursive(5))
     print(sum_recursive(0, 0))
+    print(list_sum_recursive([1, 2, 3]))
 
 
 if __name__ == "__main__":
